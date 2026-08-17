@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest cache
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# VS Code local settings
+.vscode/
+
+# Environment / secrets
+.env
+*.env
+
+# Logs
+*.log
+
+# Spark temporary files
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+hs_err_pid*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large/raw datasets
+data/*.csv
+
+# Keep the deterministic small sample
+!data/orders_small_sample.csv
+
+# Original huge dataset must never be committed
+orders_huge_mixed_quality.csv
+
+# Temporary files
+*.tmp
+*.temp

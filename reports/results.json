@@ -1,0 +1,58 @@
+{
+  "run_id": "9b99b92b-d197-4b1f-9bc1-658037ec063d",
+  "source_file": "orders_huge_mixed_quality.csv",
+  "file_size_mb": 12650.32,
+  "file_size_gb": 12.35,
+  "engine_used": "pyspark",
+  "spark_version": "4.2.0",
+  "spark_master": "local[4]",
+  "driver_memory": "8g",
+  "input_partitions": 436,
+
+  "rows_read": 30000000,
+  "raw_loaded": 30000000,
+
+  "valid_count": 22466172,
+  "corrected_count": 5108915,
+  "quarantine_count": 2424913,
+  "validated_total": 27575087,
+  "terminal_output_total": 30000000,
+
+  "consistency_check": {
+    "formula": "raw_count = valid_count + corrected_count + quarantine_count",
+    "raw_count": 30000000,
+    "output_count": 30000000,
+    "status": "PASS"
+  },
+
+  "write_metrics": {
+    "inserted": 27483120,
+    "updated": 91967,
+    "unchanged": 0,
+    "business_key": "order_id",
+    "write_strategy": "MongoDB upsert"
+  },
+
+  "error_case_counts": {
+    "UNKNOWN_PRICE": 543320,
+    "CORRUPTED_ITEMS_JSON": 419906,
+    "MISSING_CUSTOMER_ID": 419474,
+    "AMBIGUOUS_NEGATIVE_VALUE": 419135,
+    "EMAIL_INVALID_UNSAFE": 418709,
+    "INVALID_IMPOSSIBLE_DATE": 210524,
+    "EMPTY_ITEMS": 209934,
+    "DUPLICATE_ORDER_ID": 209895,
+    "MISSING_ORDER_ID": 209392
+  },
+
+  "elapsed_seconds": 19486.02,
+  "elapsed_time": "05:24:46",
+  "throughput_rows_per_second": 1539.57,
+
+  "batch_size": null,
+
+  "quality_status": "PASS",
+  "spark_elt_status": "PASS",
+  "upsert_status": "PASS",
+  "idempotency_status": "PASS"
+}
