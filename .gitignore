@@ -44,3 +44,14 @@ orders_huge_mixed_quality.csv
 # Temporary files
 *.tmp
 *.temp
+# Local doctor-test data
+data/doctor_tests/
+
+# Unrelated local project
+delivery_yemen/
+
+# Presentation backups
+presentation/*_BACKUP.html
+
+# Per-run temporary result files
+reports/results_*.json
