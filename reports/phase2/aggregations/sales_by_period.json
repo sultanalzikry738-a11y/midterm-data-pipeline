@@ -1,0 +1,70 @@
+{
+  "aggregation_name": "sales_by_period",
+  "description": "إجمالي المبيعات وعدد الطلبات حسب اليوم.",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "generated_at": "2026-10-03T21:21:13.448552+00:00",
+  "returned_count": 10,
+  "results": [
+    {
+      "order_count": 86495,
+      "period": "2025-05-01",
+      "total_sales": 22492484000.0,
+      "average_order_value": 260043.75
+    },
+    {
+      "order_count": 229537,
+      "period": "2025-04-30",
+      "total_sales": 59672871000.0,
+      "average_order_value": 259970.6
+    },
+    {
+      "order_count": 230002,
+      "period": "2025-04-29",
+      "total_sales": 59725908500.0,
+      "average_order_value": 259675.6
+    },
+    {
+      "order_count": 230456,
+      "period": "2025-04-28",
+      "total_sales": 60255328000.0,
+      "average_order_value": 261461.31
+    },
+    {
+      "order_count": 230092,
+      "period": "2025-04-27",
+      "total_sales": 60019793000.0,
+      "average_order_value": 260851.28
+    },
+    {
+      "order_count": 230118,
+      "period": "2025-04-26",
+      "total_sales": 59981073500.0,
+      "average_order_value": 260653.55
+    },
+    {
+      "order_count": 229614,
+      "period": "2025-04-25",
+      "total_sales": 59672035000.0,
+      "average_order_value": 259879.78
+    },
+    {
+      "order_count": 229788,
+      "period": "2025-04-24",
+      "total_sales": 59897811500.0,
+      "average_order_value": 260665.53
+    },
+    {
+      "order_count": 228798,
+      "period": "2025-04-23",
+      "total_sales": 59686599500.0,
+      "average_order_value": 260870.29
+    },
+    {
+      "order_count": 229488,
+      "period": "2025-04-22",
+      "total_sales": 60057025500.0,
+      "average_order_value": 261700.07
+    }
+  ]
+}

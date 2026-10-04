@@ -1,0 +1,28 @@
+{
+  "aggregation_name": "payment_status_summary",
+  "description": "توزيع الطلبات حسب حالة الدفع مع إجمالي المبالغ.",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "generated_at": "2026-10-03T21:48:01.960369+00:00",
+  "returned_count": 3,
+  "results": [
+    {
+      "order_count": 18159283,
+      "payment_status": "بانتظار الدفع",
+      "total_order_value": 4730230775000.0,
+      "total_payment_amount": 4730231669000.0
+    },
+    {
+      "order_count": 9193867,
+      "payment_status": "تم الدفع",
+      "total_order_value": 2393747844500.0,
+      "total_payment_amount": 2393748276500.0
+    },
+    {
+      "order_count": 221937,
+      "payment_status": "قيد الدفع",
+      "total_order_value": 57819427000.0,
+      "total_payment_amount": 57819427000.0
+    }
+  ]
+}

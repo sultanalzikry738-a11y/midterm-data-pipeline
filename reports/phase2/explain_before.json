@@ -1,0 +1,89 @@
+{
+  "phase": "before",
+  "captured_at": "2026-10-01T17:54:29.039508+00:00",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "collection_count": 27575087,
+  "dynamic_parameters": {
+    "start_date": "2025-01-12T00:00:00",
+    "end_date": "2025-01-12T23:59:59",
+    "customer_id": "عميل-1",
+    "city": "لحج",
+    "status": "قيد الانتظار"
+  },
+  "indexes_at_capture": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    },
+    "ux_order_id": {
+      "v": 2,
+      "key": [
+        [
+          "order_id",
+          1
+        ]
+      ],
+      "unique": true
+    }
+  },
+  "results": [
+    {
+      "query_name": "orders_by_date_range",
+      "filter": {
+        "order_date": {
+          "$gte": "2025-01-12T00:00:00",
+          "$lte": "2025-01-12T23:59:59"
+        }
+      },
+      "n_returned": 20,
+      "execution_time_ms": 10,
+      "total_docs_examined": 3038,
+      "total_keys_examined": 0,
+      "plan_stages": [
+        "COLLSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": true,
+      "uses_ixscan": false
+    },
+    {
+      "query_name": "customer_order_history",
+      "filter": {
+        "customer_id": "عميل-1"
+      },
+      "n_returned": 1,
+      "execution_time_ms": 39670,
+      "total_docs_examined": 27575087,
+      "total_keys_examined": 0,
+      "plan_stages": [
+        "COLLSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": true,
+      "uses_ixscan": false
+    },
+    {
+      "query_name": "orders_by_city_status",
+      "filter": {
+        "city": "لحج",
+        "status": "قيد الانتظار"
+      },
+      "n_returned": 20,
+      "execution_time_ms": 1,
+      "total_docs_examined": 1303,
+      "total_keys_examined": 0,
+      "plan_stages": [
+        "COLLSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": true,
+      "uses_ixscan": false
+    }
+  ]
+}

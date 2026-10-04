@@ -1,0 +1,80 @@
+{
+  "aggregation_name": "top_customers",
+  "description": "أفضل العملاء حسب إجمالي قيمة مشترياتهم.",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "generated_at": "2026-10-01T22:29:56.985334+00:00",
+  "returned_count": 10,
+  "results": [
+    {
+      "order_count": 1,
+      "customer_id": "عميل-20714273",
+      "customer_name": "هدى سالم",
+      "total_spent": 2328500.0,
+      "average_order_value": 2328500.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-9181955",
+      "customer_name": "يوسف طارق",
+      "total_spent": 2300000.0,
+      "average_order_value": 2300000.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-29521677",
+      "customer_name": "محمد علي",
+      "total_spent": 2295500.0,
+      "average_order_value": 2295500.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-10997681",
+      "customer_name": "محمد علي",
+      "total_spent": 2294000.0,
+      "average_order_value": 2294000.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-15725023",
+      "customer_name": "خالد سالم",
+      "total_spent": 2289500.0,
+      "average_order_value": 2289500.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-23250999",
+      "customer_name": "ريم عادل",
+      "total_spent": 2282000.0,
+      "average_order_value": 2282000.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-26369928",
+      "customer_name": "خالد سالم",
+      "total_spent": 2279000.0,
+      "average_order_value": 2279000.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-28866890",
+      "customer_name": "يوسف طارق",
+      "total_spent": 2277500.0,
+      "average_order_value": 2277500.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-4884497",
+      "customer_name": "علي حسين",
+      "total_spent": 2273000.0,
+      "average_order_value": 2273000.0
+    },
+    {
+      "order_count": 1,
+      "customer_id": "عميل-21707399",
+      "customer_name": "هدى سالم",
+      "total_spent": 2273000.0,
+      "average_order_value": 2273000.0
+    }
+  ]
+}

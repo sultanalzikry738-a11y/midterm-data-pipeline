@@ -1,0 +1,50 @@
+{
+  "aggregation_name": "orders_by_status",
+  "description": "توزيع الطلبات حسب حالة الطلب مع إجمالي المبيعات.",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "generated_at": "2026-10-03T21:28:17.600247+00:00",
+  "returned_count": 8,
+  "results": [
+    {
+      "order_count": 4562363,
+      "status": "قيد الشحن",
+      "total_sales": 1187097873000.0
+    },
+    {
+      "order_count": 4561390,
+      "status": "ملغي",
+      "total_sales": 1188487100000.0
+    },
+    {
+      "order_count": 4561066,
+      "status": "قيد الانتظار",
+      "total_sales": 1188263105500.0
+    },
+    {
+      "order_count": 4560970,
+      "status": "مرتجع",
+      "total_sales": 1188601014500.0
+    },
+    {
+      "order_count": 4560840,
+      "status": "مؤكد",
+      "total_sales": 1187651670000.0
+    },
+    {
+      "order_count": 4559048,
+      "status": "تم التسليم",
+      "total_sales": 1187003445000.0
+    },
+    {
+      "order_count": 209409,
+      "status": "حالة غير معروفة تمامًا",
+      "total_sales": 54693089000.0
+    },
+    {
+      "order_count": 1,
+      "status": "تم التحديث للاختبار",
+      "total_sales": 749500.0
+    }
+  ]
+}

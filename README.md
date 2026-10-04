@@ -823,3 +823,662 @@ All source records are preserved in the Raw layer before cleaning. Records are t
 The final business state is protected using a Stable Business Key, Unique Index, Idempotent Upsert and consistency checks.
 
 The pipeline also records execution metrics and provides documented evidence for Python Batch, PySpark, MongoDB, Data Quality, Idempotency and testing.
+
+
+
+---
+
+# Phase 2 - Final Project Additions
+
+Phase 2 extends the existing Hybrid Big Data ELT Pipeline without replacing the Midterm implementation.
+
+The additions include MongoDB Queries, Indexes with Explain evidence, Aggregation Reports, Materialized Views with Incremental Refresh, Scheduled Jobs, and a Unified FastAPI.
+
+## 23. Phase 2 Structure
+
+Phase 2 source files:
+
+```text
+src/
+└── phase2/
+    ├── __init__.py
+    ├── queries.py
+    ├── indexes.py
+    ├── aggregations.py
+    ├── materialized_views.py
+    ├── jobs.py
+    └── api.py
+```
+
+Phase 2 generated evidence and reports:
+
+```text
+reports/
+└── phase2/
+    ├── explain_before.json
+    ├── explain_after.json
+    ├── aggregations/
+    │   ├── sales_by_city.json
+    │   ├── top_customers.json
+    │   ├── sales_by_period.json
+    │   ├── orders_by_status.json
+    │   └── payment_status_summary.json
+    └── jobs/
+        ├── job_execution_log.jsonl
+        ├── job_state.json
+        └── materialized_views_report_latest.json
+```
+
+---
+
+## 24. Practical Queries
+
+The project implements five practical MongoDB queries:
+
+| Query | Purpose |
+|---|---|
+| `orders_by_date_range` | Retrieve orders within a date range |
+| `customer_order_history` | Retrieve the order history of a customer |
+| `orders_by_city_status` | Filter orders by city and status |
+| `high_value_orders` | Retrieve orders above a specified total amount |
+| `orders_by_payment_status` | Retrieve orders by payment status |
+
+List all queries:
+
+```powershell
+python -m src.phase2.queries --list
+```
+
+The queries are parameterized and do not depend on fixed results or fixed row counts.
+
+---
+
+## 25. MongoDB Indexes
+
+Phase 2 provides indexes supporting the practical queries.
+
+| Index | Fields | Type |
+|---|---|---|
+| `idx_order_date` | `order_date` | Single |
+| `idx_customer_date` | `customer_id`, `order_date` | Compound |
+| `idx_city_status_date` | `city`, `status`, `order_date` | Compound |
+| `idx_total_amount` | `total_amount` | Single |
+| `idx_payment_status_date` | `payment_status`, `order_date` | Compound |
+| `idx_source_ingested_at_mv` | `source_ingested_at` | Single |
+
+The compound indexes support queries that filter and sort using more than one field.
+
+The `idx_source_ingested_at_mv` index supports Incremental Refresh for Materialized Views.
+
+---
+
+## 26. Explain Before and After Indexes
+
+MongoDB execution statistics were captured for three queries before and after creating the Phase 2 indexes.
+
+Evidence files:
+
+```text
+reports/phase2/explain_before.json
+reports/phase2/explain_after.json
+```
+
+### orders_by_date_range
+
+Before:
+
+```text
+COLLSCAN
+Documents Examined: 3038
+Keys Examined: 0
+Returned: 20
+```
+
+After:
+
+```text
+IXSCAN
+Documents Examined: 20
+Keys Examined: 20
+Returned: 20
+```
+
+### customer_order_history
+
+Before:
+
+```text
+COLLSCAN
+Documents Examined: 27575087
+Keys Examined: 0
+Returned: 1
+Execution Time: 39670 ms
+```
+
+After:
+
+```text
+IXSCAN
+Documents Examined: 1
+Keys Examined: 1
+Returned: 1
+Execution Time: 1 ms
+```
+
+### orders_by_city_status
+
+Before:
+
+```text
+COLLSCAN
+Documents Examined: 1303
+Keys Examined: 0
+Returned: 20
+```
+
+After:
+
+```text
+IXSCAN
+Documents Examined: 20
+Keys Examined: 20
+Returned: 20
+```
+
+The results demonstrate the transition from Collection Scan (`COLLSCAN`) to Index Scan (`IXSCAN`) and a significant reduction in documents examined.
+
+---
+
+## 27. Aggregation Reports
+
+Five independent MongoDB Aggregation Reports are implemented:
+
+| Aggregation | Description |
+|---|---|
+| `sales_by_city` | Sales and order statistics by city |
+| `top_customers` | Customers ranked by total spending |
+| `sales_by_period` | Daily sales statistics |
+| `orders_by_status` | Order distribution by status |
+| `payment_status_summary` | Order and payment totals by payment status |
+
+List reports:
+
+```powershell
+python -m src.phase2.aggregations --list
+```
+
+Example execution:
+
+```powershell
+python -m src.phase2.aggregations --name orders_by_status --limit 10 --save
+```
+
+Generated reports are saved under:
+
+```text
+reports/phase2/aggregations/
+```
+
+All reports execute against real data in MongoDB.
+
+---
+
+## 28. Materialized Views
+
+Two Materialized Views are implemented:
+
+```text
+daily_sales_summary
+city_sales_summary
+```
+
+### daily_sales_summary
+
+Stores daily summary information including:
+
+```text
+period
+order_count
+total_sales
+average_order_value
+refreshed_at
+source_watermark
+```
+
+### city_sales_summary
+
+Stores summary information by city including:
+
+```text
+city
+order_count
+total_sales
+average_order_value
+refreshed_at
+source_watermark
+```
+
+List Materialized Views:
+
+```powershell
+python -m src.phase2.materialized_views --list
+```
+
+Check their current status:
+
+```powershell
+python -m src.phase2.materialized_views --status
+```
+
+Refresh one Materialized View:
+
+```powershell
+python -m src.phase2.materialized_views --refresh daily_sales_summary
+```
+
+Refresh all Materialized Views:
+
+```powershell
+python -m src.phase2.materialized_views --refresh-all
+```
+
+A full rebuild is available only when explicitly needed:
+
+```powershell
+python -m src.phase2.materialized_views --refresh-all --rebuild
+```
+
+Normal refresh operations should not use `--rebuild`.
+
+---
+
+## 29. Incremental Refresh
+
+The Materialized Views use:
+
+```text
+source_ingested_at
+```
+
+as the Incremental Refresh watermark.
+
+This field was selected because the existing Phase 1 ingestion process updates it when a record is ingested or reprocessed.
+
+The supporting index is:
+
+```text
+idx_source_ingested_at_mv
+```
+
+The refresh mechanism supports three modes:
+
+```text
+FULL_BUILD
+INCREMENTAL
+NO_CHANGES
+```
+
+### FULL_BUILD
+
+Used during the first creation of a Materialized View or when a rebuild is explicitly requested.
+
+### INCREMENTAL
+
+The system detects source documents whose `source_ingested_at` is newer than the previous watermark.
+
+It then determines the affected buckets and recalculates only those buckets instead of rebuilding all Materialized Views from scratch.
+
+The incremental mechanism was tested successfully.
+
+Observed daily result:
+
+```text
+view_name: daily_sales_summary
+refresh_mode: INCREMENTAL
+watermark_field: source_ingested_at
+affected_buckets: 116
+document_count: 121
+```
+
+Observed city result:
+
+```text
+view_name: city_sales_summary
+refresh_mode: INCREMENTAL
+watermark_field: source_ingested_at
+affected_buckets: 10
+document_count: 10
+```
+
+A subsequent refresh without new source changes returned:
+
+```text
+refresh_mode: NO_CHANGES
+affected_buckets: 0
+```
+
+This confirms that a Full Build is not performed on every refresh.
+
+---
+
+## 30. Scheduled Jobs
+
+Two Scheduled Jobs are implemented:
+
+| Job | Schedule | Purpose |
+|---|---|---|
+| `refresh_materialized_views` | Every 1 hour | Refresh Materialized Views |
+| `export_materialized_views_report` | Every 24 hours | Export a periodic Materialized Views report |
+
+List jobs:
+
+```powershell
+python -m src.phase2.jobs --list
+```
+
+Run the Materialized Views refresh manually:
+
+```powershell
+python -m src.phase2.jobs --run refresh_materialized_views
+```
+
+Run the report export manually:
+
+```powershell
+python -m src.phase2.jobs --run export_materialized_views_report
+```
+
+Run only jobs whose schedules are due:
+
+```powershell
+python -m src.phase2.jobs --run-due
+```
+
+Start the scheduler loop:
+
+```powershell
+python -m src.phase2.jobs --scheduler
+```
+
+The scheduler process must remain running for automatic periodic execution.
+
+Stop it using:
+
+```text
+Ctrl + C
+```
+
+Job logs record:
+
+```text
+Job name
+Start time
+End time
+Duration
+SUCCESS or FAILED
+Execution result
+```
+
+Execution logs:
+
+```text
+reports/phase2/jobs/job_execution_log.jsonl
+```
+
+Latest job state:
+
+```text
+reports/phase2/jobs/job_state.json
+```
+
+---
+
+## 31. Unified FastAPI
+
+Phase 2 includes a Unified FastAPI wrapper.
+
+The API does not create a second ingestion implementation.
+
+`POST /ingest` directly calls the existing Phase 1 function:
+
+```python
+run_pipeline(
+    input_path=input_path,
+    execute=True,
+)
+```
+
+Therefore the existing automatic Router, Python Batch path, PySpark path, Raw loading, cleaning, validation, Upsert, and metrics remain the official ingestion path.
+
+---
+
+## 32. Start FastAPI
+
+From the project root:
+
+```powershell
+python -m uvicorn src.phase2.api:app --host 127.0.0.1 --port 8000
+```
+
+Swagger UI:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+API root:
+
+```text
+http://127.0.0.1:8000/
+```
+
+Stop the server using:
+
+```text
+Ctrl + C
+```
+
+---
+
+## 33. API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/health` | Check API and MongoDB connectivity |
+| POST | `/ingest` | Run the existing Phase 1 ingestion pipeline |
+| POST | `/indexes` | Create or verify Phase 2 indexes |
+| GET | `/queries` | List practical queries |
+| GET | `/queries/{name}` | Execute a named query |
+| GET | `/aggregations` | List Aggregation Reports |
+| GET | `/aggregations/{name}` | Execute a named Aggregation Report |
+| POST | `/refresh-mv` | Refresh Materialized Views |
+| GET | `/jobs` | List jobs and their latest state |
+| POST | `/jobs/{name}/run` | Run a job manually |
+
+An additional endpoint is available:
+
+```text
+GET /indexes
+```
+
+All API responses are returned as JSON.
+
+---
+
+## 34. API Usage Examples
+
+### Health
+
+```http
+GET /health
+```
+
+Example response:
+
+```json
+{
+  "status": "HEALTHY",
+  "api": "UP",
+  "mongodb": "UP",
+  "database": "midterm_data_pipeline"
+}
+```
+
+### High Value Orders
+
+```text
+GET /queries/high_value_orders?min_amount=500000&limit=3
+```
+
+### Aggregation Report
+
+```text
+GET /aggregations/orders_by_status?limit=10
+```
+
+### Refresh Materialized Views
+
+```http
+POST /refresh-mv
+```
+
+Body:
+
+```json
+{
+  "view_name": null,
+  "force_rebuild": false
+}
+```
+
+### Run Scheduled Job Manually
+
+```text
+POST /jobs/refresh_materialized_views/run
+```
+
+### Ingest CSV
+
+```http
+POST /ingest
+```
+
+Body example:
+
+```json
+{
+  "input_path": "data/orders_small_sample.csv"
+}
+```
+
+The automatic Router decides between Python Batch and PySpark according to the input file size.
+
+---
+
+## 35. API Verification
+
+The Unified FastAPI was tested using Swagger UI.
+
+```text
+GET  /health                  PASS
+POST /ingest                  PASS
+POST /indexes                 PASS
+GET  /queries                 PASS
+GET  /queries/{name}          PASS
+GET  /aggregations            PASS
+GET  /aggregations/{name}     PASS
+POST /refresh-mv              PASS
+GET  /jobs                    PASS
+POST /jobs/{name}/run         PASS
+Swagger /docs                 PASS
+```
+
+The `/ingest` endpoint was tested using a 500-row CSV and successfully executed the existing Phase 1 Python Batch pipeline.
+
+The response included:
+
+```text
+run_id
+route
+raw_metrics
+elt_metrics
+results
+```
+
+---
+
+## 36. Environment Configuration
+
+An example configuration file is provided:
+
+```text
+.env.example
+```
+
+It documents the configurable environment variables used by the project:
+
+```text
+INPUT_FILE
+SMALL_SAMPLE_FILE
+SMALL_FILE_THRESHOLD_MB
+BATCH_SIZE
+SAMPLE_ROWS
+MONGO_URI
+MONGO_DB_NAME
+RAW_COLLECTION
+VALIDATED_COLLECTION
+QUARANTINE_COLLECTION
+SPARK_MASTER
+SPARK_APP_NAME
+```
+
+The project also contains safe default values in `config/settings.py`.
+
+No passwords or private secrets are stored in `.env.example`.
+
+---
+
+## 37. Requirements
+
+Install the Python dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+The current requirements include:
+
+```text
+pymongo==4.17.0
+pyspark==4.2.0
+pytest==9.1.1
+fastapi==0.127.0
+uvicorn==0.40.0
+```
+
+MongoDB Server and Java are also required for the MongoDB and PySpark parts of the project.
+
+---
+
+## 38. Phase 2 Final Status
+
+```text
+Practical Queries                    PASS
+Indexes                              PASS
+Compound Indexes                     PASS
+Explain Before/After                 PASS
+Aggregation Reports                  PASS
+Materialized Views                   PASS
+Incremental Refresh                  PASS
+Scheduled Jobs                       PASS
+Job Logs                             PASS
+Unified FastAPI                      PASS
+Swagger UI                           PASS
+Required API Endpoints               PASS
+requirements.txt                     PASS
+.env.example                         PASS
+```
+
+Phase 2 was implemented as an extension of the same repository and the same Hybrid Big Data ELT Pipeline.
+
+The original Midterm pipeline remains intact.

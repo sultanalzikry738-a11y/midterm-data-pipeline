@@ -1,0 +1,1063 @@
+{
+  "report_name": "materialized_views_periodic_report",
+  "database": "midterm_data_pipeline",
+  "generated_at": "2026-10-03T23:48:30.359501+00:00",
+  "daily_sales_summary": {
+    "document_count": 121,
+    "results": [
+      {
+        "order_count": 86495,
+        "total_sales": 22492484000.0,
+        "period": "2025-05-01",
+        "average_order_value": 260043.75,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229537,
+        "total_sales": 59672871000.0,
+        "period": "2025-04-30",
+        "average_order_value": 259970.6,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230002,
+        "total_sales": 59725908500.0,
+        "period": "2025-04-29",
+        "average_order_value": 259675.6,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230456,
+        "total_sales": 60255328000.0,
+        "period": "2025-04-28",
+        "average_order_value": 261461.31,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230092,
+        "total_sales": 60019793000.0,
+        "period": "2025-04-27",
+        "average_order_value": 260851.28,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230118,
+        "total_sales": 59981073500.0,
+        "period": "2025-04-26",
+        "average_order_value": 260653.55,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229614,
+        "total_sales": 59672035000.0,
+        "period": "2025-04-25",
+        "average_order_value": 259879.78,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229788,
+        "total_sales": 59897811500.0,
+        "period": "2025-04-24",
+        "average_order_value": 260665.53,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228798,
+        "total_sales": 59686599500.0,
+        "period": "2025-04-23",
+        "average_order_value": 260870.29,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229488,
+        "total_sales": 60057025500.0,
+        "period": "2025-04-22",
+        "average_order_value": 261700.07,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229282,
+        "total_sales": 59703385500.0,
+        "period": "2025-04-21",
+        "average_order_value": 260392.82,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230365,
+        "total_sales": 60001070000.0,
+        "period": "2025-04-20",
+        "average_order_value": 260460.88,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230819,
+        "total_sales": 60329394000.0,
+        "period": "2025-04-19",
+        "average_order_value": 261371.0,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230036,
+        "total_sales": 60065478500.0,
+        "period": "2025-04-18",
+        "average_order_value": 261113.38,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229647,
+        "total_sales": 59729965000.0,
+        "period": "2025-04-17",
+        "average_order_value": 260094.69,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230099,
+        "total_sales": 59550288500.0,
+        "period": "2025-04-16",
+        "average_order_value": 258802.9,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229934,
+        "total_sales": 59803470500.0,
+        "period": "2025-04-15",
+        "average_order_value": 260089.72,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228749,
+        "total_sales": 59704162000.0,
+        "period": "2025-04-14",
+        "average_order_value": 261002.94,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230369,
+        "total_sales": 59915202000.0,
+        "period": "2025-04-13",
+        "average_order_value": 260083.61,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229563,
+        "total_sales": 59667315500.0,
+        "period": "2025-04-12",
+        "average_order_value": 259916.95,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230266,
+        "total_sales": 60013080000.0,
+        "period": "2025-04-11",
+        "average_order_value": 260625.02,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229287,
+        "total_sales": 59489840000.0,
+        "period": "2025-04-10",
+        "average_order_value": 259455.79,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229890,
+        "total_sales": 59756642000.0,
+        "period": "2025-04-09",
+        "average_order_value": 259935.8,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228831,
+        "total_sales": 59691559500.0,
+        "period": "2025-04-08",
+        "average_order_value": 260854.34,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229397,
+        "total_sales": 59545879500.0,
+        "period": "2025-04-07",
+        "average_order_value": 259575.67,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229903,
+        "total_sales": 59912272500.0,
+        "period": "2025-04-06",
+        "average_order_value": 260598.05,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230324,
+        "total_sales": 60040188500.0,
+        "period": "2025-04-05",
+        "average_order_value": 260677.08,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230132,
+        "total_sales": 59724482000.0,
+        "period": "2025-04-04",
+        "average_order_value": 259522.72,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230124,
+        "total_sales": 59897445500.0,
+        "period": "2025-04-03",
+        "average_order_value": 260283.35,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228870,
+        "total_sales": 59857853500.0,
+        "period": "2025-04-02",
+        "average_order_value": 261536.48,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228279,
+        "total_sales": 59461870000.0,
+        "period": "2025-04-01",
+        "average_order_value": 260478.93,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229801,
+        "total_sales": 59629176000.0,
+        "period": "2025-03-31",
+        "average_order_value": 259481.8,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229469,
+        "total_sales": 59870479500.0,
+        "period": "2025-03-30",
+        "average_order_value": 260908.79,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229703,
+        "total_sales": 59718186000.0,
+        "period": "2025-03-29",
+        "average_order_value": 259980.0,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229643,
+        "total_sales": 59753793500.0,
+        "period": "2025-03-28",
+        "average_order_value": 260202.98,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229771,
+        "total_sales": 59923335000.0,
+        "period": "2025-03-27",
+        "average_order_value": 260795.9,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 231168,
+        "total_sales": 60423130000.0,
+        "period": "2025-03-26",
+        "average_order_value": 261381.9,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230483,
+        "total_sales": 59975057000.0,
+        "period": "2025-03-25",
+        "average_order_value": 260214.67,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229972,
+        "total_sales": 60138294500.0,
+        "period": "2025-03-24",
+        "average_order_value": 261502.68,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229877,
+        "total_sales": 59887421000.0,
+        "period": "2025-03-23",
+        "average_order_value": 260519.41,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228777,
+        "total_sales": 59488494500.0,
+        "period": "2025-03-22",
+        "average_order_value": 260028.3,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229163,
+        "total_sales": 59633871000.0,
+        "period": "2025-03-21",
+        "average_order_value": 260224.69,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229544,
+        "total_sales": 59886876000.0,
+        "period": "2025-03-20",
+        "average_order_value": 260894.97,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230047,
+        "total_sales": 59886866500.0,
+        "period": "2025-03-19",
+        "average_order_value": 260324.48,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229203,
+        "total_sales": 59604844500.0,
+        "period": "2025-03-18",
+        "average_order_value": 260052.64,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229342,
+        "total_sales": 59654577500.0,
+        "period": "2025-03-17",
+        "average_order_value": 260111.87,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228966,
+        "total_sales": 59525989500.0,
+        "period": "2025-03-16",
+        "average_order_value": 259977.42,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230027,
+        "total_sales": 60111231500.0,
+        "period": "2025-03-15",
+        "average_order_value": 261322.5,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229904,
+        "total_sales": 59827948000.0,
+        "period": "2025-03-14",
+        "average_order_value": 260230.13,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230811,
+        "total_sales": 60283751000.0,
+        "period": "2025-03-13",
+        "average_order_value": 261182.31,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229311,
+        "total_sales": 59744817000.0,
+        "period": "2025-03-12",
+        "average_order_value": 260540.56,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229791,
+        "total_sales": 59802404500.0,
+        "period": "2025-03-11",
+        "average_order_value": 260246.94,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230345,
+        "total_sales": 59987502500.0,
+        "period": "2025-03-10",
+        "average_order_value": 260424.59,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229944,
+        "total_sales": 59771395000.0,
+        "period": "2025-03-09",
+        "average_order_value": 259938.92,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228695,
+        "total_sales": 59407134000.0,
+        "period": "2025-03-08",
+        "average_order_value": 259765.78,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229136,
+        "total_sales": 59599033000.0,
+        "period": "2025-03-07",
+        "average_order_value": 260103.31,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229794,
+        "total_sales": 59715096000.0,
+        "period": "2025-03-06",
+        "average_order_value": 259863.6,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229944,
+        "total_sales": 59917822500.0,
+        "period": "2025-03-05",
+        "average_order_value": 260575.72,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229499,
+        "total_sales": 59788257500.0,
+        "period": "2025-03-04",
+        "average_order_value": 260516.42,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229458,
+        "total_sales": 59696291000.0,
+        "period": "2025-03-03",
+        "average_order_value": 260162.17,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229082,
+        "total_sales": 59626380500.0,
+        "period": "2025-03-02",
+        "average_order_value": 260284.01,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229799,
+        "total_sales": 59719772000.0,
+        "period": "2025-03-01",
+        "average_order_value": 259878.29,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230359,
+        "total_sales": 59870204500.0,
+        "period": "2025-02-28",
+        "average_order_value": 259899.57,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230093,
+        "total_sales": 59816932000.0,
+        "period": "2025-02-27",
+        "average_order_value": 259968.5,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230138,
+        "total_sales": 59827420000.0,
+        "period": "2025-02-26",
+        "average_order_value": 259963.24,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229713,
+        "total_sales": 59861173500.0,
+        "period": "2025-02-25",
+        "average_order_value": 260591.14,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229941,
+        "total_sales": 59985101500.0,
+        "period": "2025-02-24",
+        "average_order_value": 260871.71,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229932,
+        "total_sales": 60010832000.0,
+        "period": "2025-02-23",
+        "average_order_value": 260993.82,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229880,
+        "total_sales": 59982745000.0,
+        "period": "2025-02-22",
+        "average_order_value": 260930.68,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229582,
+        "total_sales": 60119385500.0,
+        "period": "2025-02-21",
+        "average_order_value": 261864.54,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230498,
+        "total_sales": 59976165500.0,
+        "period": "2025-02-20",
+        "average_order_value": 260202.54,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230332,
+        "total_sales": 60165249000.0,
+        "period": "2025-02-19",
+        "average_order_value": 261210.99,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229461,
+        "total_sales": 60153860500.0,
+        "period": "2025-02-18",
+        "average_order_value": 262152.87,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229723,
+        "total_sales": 59626380000.0,
+        "period": "2025-02-17",
+        "average_order_value": 259557.73,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230311,
+        "total_sales": 59801961500.0,
+        "period": "2025-02-16",
+        "average_order_value": 259657.43,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229947,
+        "total_sales": 59793730500.0,
+        "period": "2025-02-15",
+        "average_order_value": 260032.66,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230550,
+        "total_sales": 60166114500.0,
+        "period": "2025-02-14",
+        "average_order_value": 260967.75,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229562,
+        "total_sales": 59754844500.0,
+        "period": "2025-02-13",
+        "average_order_value": 260299.37,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229877,
+        "total_sales": 59895801000.0,
+        "period": "2025-02-12",
+        "average_order_value": 260555.87,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230181,
+        "total_sales": 59980577500.0,
+        "period": "2025-02-11",
+        "average_order_value": 260580.05,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230555,
+        "total_sales": 60161958000.0,
+        "period": "2025-02-10",
+        "average_order_value": 260944.06,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229138,
+        "total_sales": 59735849000.0,
+        "period": "2025-02-09",
+        "average_order_value": 260698.13,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230083,
+        "total_sales": 60223214500.0,
+        "period": "2025-02-08",
+        "average_order_value": 261745.61,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230389,
+        "total_sales": 60046794500.0,
+        "period": "2025-02-07",
+        "average_order_value": 260632.21,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229018,
+        "total_sales": 59712811500.0,
+        "period": "2025-02-06",
+        "average_order_value": 260734.14,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229972,
+        "total_sales": 59988070000.0,
+        "period": "2025-02-05",
+        "average_order_value": 260849.45,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230022,
+        "total_sales": 59818071500.0,
+        "period": "2025-02-04",
+        "average_order_value": 260053.7,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229442,
+        "total_sales": 59772532500.0,
+        "period": "2025-02-03",
+        "average_order_value": 260512.6,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230087,
+        "total_sales": 59983826500.0,
+        "period": "2025-02-02",
+        "average_order_value": 260700.63,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230170,
+        "total_sales": 59929086000.0,
+        "period": "2025-02-01",
+        "average_order_value": 260368.8,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230610,
+        "total_sales": 59965343000.0,
+        "period": "2025-01-31",
+        "average_order_value": 260029.24,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228866,
+        "total_sales": 59559743000.0,
+        "period": "2025-01-30",
+        "average_order_value": 260238.49,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229422,
+        "total_sales": 59983687000.0,
+        "period": "2025-01-29",
+        "average_order_value": 261455.69,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230052,
+        "total_sales": 59885184500.0,
+        "period": "2025-01-28",
+        "average_order_value": 260311.51,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229913,
+        "total_sales": 59848154000.0,
+        "period": "2025-01-27",
+        "average_order_value": 260307.83,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230303,
+        "total_sales": 60095770000.0,
+        "period": "2025-01-26",
+        "average_order_value": 260942.19,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229902,
+        "total_sales": 59929369500.0,
+        "period": "2025-01-25",
+        "average_order_value": 260673.55,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229757,
+        "total_sales": 59812951000.0,
+        "period": "2025-01-24",
+        "average_order_value": 260331.35,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230576,
+        "total_sales": 59988593000.0,
+        "period": "2025-01-23",
+        "average_order_value": 260168.42,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229882,
+        "total_sales": 59844054500.0,
+        "period": "2025-01-22",
+        "average_order_value": 260325.1,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229763,
+        "total_sales": 59694053500.0,
+        "period": "2025-01-21",
+        "average_order_value": 259807.08,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230486,
+        "total_sales": 59991430000.0,
+        "period": "2025-01-20",
+        "average_order_value": 260282.32,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229289,
+        "total_sales": 59579925000.0,
+        "period": "2025-01-19",
+        "average_order_value": 259846.42,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229742,
+        "total_sales": 59618241000.0,
+        "period": "2025-01-18",
+        "average_order_value": 259500.84,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230961,
+        "total_sales": 60395934500.0,
+        "period": "2025-01-17",
+        "average_order_value": 261498.41,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230086,
+        "total_sales": 59784702000.0,
+        "period": "2025-01-16",
+        "average_order_value": 259836.33,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230005,
+        "total_sales": 59863909000.0,
+        "period": "2025-01-15",
+        "average_order_value": 260272.21,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229865,
+        "total_sales": 59812742500.0,
+        "period": "2025-01-14",
+        "average_order_value": 260208.13,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229883,
+        "total_sales": 59911956000.0,
+        "period": "2025-01-13",
+        "average_order_value": 260619.34,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229384,
+        "total_sales": 59727360500.0,
+        "period": "2025-01-12",
+        "average_order_value": 260381.55,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229151,
+        "total_sales": 59782508000.0,
+        "period": "2025-01-11",
+        "average_order_value": 260886.96,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229545,
+        "total_sales": 59712275500.0,
+        "period": "2025-01-10",
+        "average_order_value": 260133.2,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230240,
+        "total_sales": 60196131500.0,
+        "period": "2025-01-09",
+        "average_order_value": 261449.49,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229081,
+        "total_sales": 59528713500.0,
+        "period": "2025-01-08",
+        "average_order_value": 259858.8,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229077,
+        "total_sales": 59703635500.0,
+        "period": "2025-01-07",
+        "average_order_value": 260626.93,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229689,
+        "total_sales": 59860082500.0,
+        "period": "2025-01-06",
+        "average_order_value": 260613.62,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 230145,
+        "total_sales": 59892165500.0,
+        "period": "2025-01-05",
+        "average_order_value": 260236.66,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229249,
+        "total_sales": 59520298000.0,
+        "period": "2025-01-04",
+        "average_order_value": 259631.66,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 229879,
+        "total_sales": 59868150500.0,
+        "period": "2025-01-03",
+        "average_order_value": 260433.32,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 228787,
+        "total_sales": 59633906000.0,
+        "period": "2025-01-02",
+        "average_order_value": 260652.51,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 143518,
+        "total_sales": 37325382000.0,
+        "period": "2025-01-01",
+        "average_order_value": 260074.57,
+        "refreshed_at": "2026-10-03T22:33:26.637000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      }
+    ]
+  },
+  "city_sales_summary": {
+    "document_count": 10,
+    "results": [
+      {
+        "order_count": 2758252,
+        "total_sales": 719140946000.0,
+        "city": "تعز",
+        "average_order_value": 260723.44,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2760669,
+        "total_sales": 719017930500.0,
+        "city": "صنعاء",
+        "average_order_value": 260450.61,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2759496,
+        "total_sales": 718441534500.0,
+        "city": "لحج",
+        "average_order_value": 260352.45,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2757548,
+        "total_sales": 718307442500.0,
+        "city": "إب",
+        "average_order_value": 260487.74,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2757195,
+        "total_sales": 718091899000.0,
+        "city": "المكلا",
+        "average_order_value": 260442.91,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2754130,
+        "total_sales": 718057638000.0,
+        "city": "حجة",
+        "average_order_value": 260720.31,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2758910,
+        "total_sales": 717941874000.0,
+        "city": "عدن",
+        "average_order_value": 260226.64,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2757420,
+        "total_sales": 717721881500.0,
+        "city": "عمران",
+        "average_order_value": 260287.47,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2756491,
+        "total_sales": 717692946000.0,
+        "city": "الحديدة",
+        "average_order_value": 260364.7,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      },
+      {
+        "order_count": 2754976,
+        "total_sales": 717383954500.0,
+        "city": "ذمار",
+        "average_order_value": 260395.72,
+        "refreshed_at": "2026-10-03T23:22:52.198000",
+        "source_watermark": "2026-08-17T12:55:21.155000"
+      }
+    ]
+  }
+}

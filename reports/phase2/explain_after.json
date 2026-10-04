@@ -1,0 +1,131 @@
+{
+  "phase": "after",
+  "captured_at": "2026-10-01T18:15:27.963327+00:00",
+  "database": "midterm_data_pipeline",
+  "collection": "orders_validated",
+  "collection_count": 27575087,
+  "dynamic_parameters": {
+    "start_date": "2025-01-01T00:00:00",
+    "end_date": "2025-01-01T23:59:59",
+    "customer_id": "عميل-10819692",
+    "city": "عمران",
+    "status": "مرتجع"
+  },
+  "indexes_at_capture": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    },
+    "ux_order_id": {
+      "v": 2,
+      "key": [
+        [
+          "order_id",
+          1
+        ]
+      ],
+      "unique": true
+    },
+    "idx_order_date": {
+      "v": 2,
+      "key": [
+        [
+          "order_date",
+          1
+        ]
+      ]
+    },
+    "idx_customer_date": {
+      "v": 2,
+      "key": [
+        [
+          "customer_id",
+          1
+        ],
+        [
+          "order_date",
+          -1
+        ]
+      ]
+    },
+    "idx_city_status_date": {
+      "v": 2,
+      "key": [
+        [
+          "city",
+          1
+        ],
+        [
+          "status",
+          1
+        ],
+        [
+          "order_date",
+          -1
+        ]
+      ]
+    }
+  },
+  "results": [
+    {
+      "query_name": "orders_by_date_range",
+      "filter": {
+        "order_date": {
+          "$gte": "2025-01-01T00:00:00",
+          "$lte": "2025-01-01T23:59:59"
+        }
+      },
+      "n_returned": 20,
+      "execution_time_ms": 6,
+      "total_docs_examined": 20,
+      "total_keys_examined": 20,
+      "plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": false,
+      "uses_ixscan": true
+    },
+    {
+      "query_name": "customer_order_history",
+      "filter": {
+        "customer_id": "عميل-10819692"
+      },
+      "n_returned": 1,
+      "execution_time_ms": 1,
+      "total_docs_examined": 1,
+      "total_keys_examined": 1,
+      "plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": false,
+      "uses_ixscan": true
+    },
+    {
+      "query_name": "orders_by_city_status",
+      "filter": {
+        "city": "عمران",
+        "status": "مرتجع"
+      },
+      "n_returned": 20,
+      "execution_time_ms": 2,
+      "total_docs_examined": 20,
+      "total_keys_examined": 20,
+      "plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "LIMIT"
+      ],
+      "uses_collscan": false,
+      "uses_ixscan": true
+    }
+  ]
+}
