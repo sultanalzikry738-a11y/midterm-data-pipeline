@@ -1137,6 +1137,143 @@ def apply_quality_rules(
         errors,
     )
 
+    # =====================================================
+    # DOCTOR ACCEPTANCE RULES
+    # =====================================================
+
+    # 1) Invalid / too-short phone
+    phone = record.get("customer_phone")
+
+    if phone is not None and str(phone).strip():
+
+        phone_digits = "".join(
+            ch
+            for ch in str(phone)
+            if ch.isdigit()
+        )
+
+        if len(phone_digits) not in (9, 12):
+
+            errors.append(
+                {
+                    "code": "INVALID_PHONE_TOO_SHORT",
+                    "field": "customer_phone",
+                    "value": phone,
+                    "message": (
+                        "Phone number is invalid or too short."
+                    ),
+                }
+            )
+
+    # 2) Unknown order status
+    valid_order_statuses = {
+        "\u0642\u064a\u062f \u0627\u0644\u0627\u0646\u062a\u0638\u0627\u0631",
+        "\u0642\u064a\u062f \u0627\u0644\u0634\u062d\u0646",
+        "\u0645\u0644\u063a\u064a",
+        "\u062a\u0645 \u0627\u0644\u062a\u0633\u0644\u064a\u0645",
+        "\u0645\u0624\u0643\u062f",
+        "\u0645\u0631\u062a\u062c\u0639",
+    }
+
+    status = record.get("status")
+
+    if (
+        status is not None
+        and str(status).strip() != ""
+        and status not in valid_order_statuses
+    ):
+
+        errors.append(
+            {
+                "code": "UNKNOWN_ORDER_STATUS",
+                "field": "status",
+                "value": status,
+                "message": (
+                    "Order status is not recognized."
+                ),
+            }
+        )
+
+    # 3) Unknown currency
+    currency = record.get("currency")
+
+    if currency != "YER":
+
+        errors.append(
+            {
+                "code": "UNKNOWN_CURRENCY",
+                "field": "currency",
+                "value": currency,
+                "message": (
+                    "Currency is not recognized."
+                ),
+            }
+        )
+
+    # 4 + 5) Missing SKU and string qty correction
+    if items is not None:
+
+        items_changed = False
+
+        for index, item in enumerate(items):
+
+            if not isinstance(item, dict):
+                continue
+
+            sku = item.get("sku")
+
+            if (
+                sku is None
+                or str(sku).strip() == ""
+            ):
+
+                errors.append(
+                    {
+                        "code": "MISSING_ITEM_SKU",
+                        "field": (
+                            f"items_json[{index}].sku"
+                        ),
+                        "value": sku,
+                        "message": (
+                            "Item SKU is missing."
+                        ),
+                    }
+                )
+
+            qty = item.get("qty")
+
+            if isinstance(qty, str):
+
+                qty_text = qty.strip()
+
+                if qty_text.isdigit():
+
+                    corrected_qty = int(
+                        qty_text
+                    )
+
+                    item["qty"] = (
+                        corrected_qty
+                    )
+
+                    add_correction(
+                        corrections,
+                        f"items_json[{index}].qty",
+                        qty,
+                        corrected_qty,
+                        "ITEM_QTY_STRING_TO_INT",
+                    )
+
+                    items_changed = True
+
+        if items_changed:
+
+            record["items_json"] = json.dumps(
+                items,
+                ensure_ascii=False,
+                separators=(",", ":"),
+            )
+
     validate_negative_values(
         record,
         items,
